@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #172c25;
+  background: #f7f6f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #172c25;
+  --green: #174b3b;
+  --lime: #c7e36a;
+  --cream: #f7f6f1;
+  --muted: #737b73;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; min-width: 320px; background: var(--cream); }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+::selection { background: #c7e36a; color: #172c25; }
+
+.font-heading { font-family: 'Manrope', sans-serif; }
+.section-wrap { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #547060; font-size: 11px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
+.eyebrow::before { content: ''; width: 22px; height: 1px; background: #9aaf83; }
+.soft-grid { background-image: radial-gradient(rgba(23,75,59,.10) .7px, transparent .7px); background-size: 17px 17px; }
+.image-hover img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.image-hover:hover img { transform: scale(1.045); }
+
+@media (max-width: 640px) {
+  .section-wrap { width: min(100% - 36px, 1180px); }
+}
+
+
+/* Theme switch: the selected mode is applied to the whole landing page. */
+html[data-theme="dark"] body {
+  background: #101b17;
+  color: #edf2e9;
+}
+html[data-theme="dark"] header {
+  background: rgba(16, 27, 23, .92) !important;
+  border-color: rgba(237, 242, 233, .12) !important;
+}
+html[data-theme="dark"] header small,
+html[data-theme="dark"] .text-\[\#526057\],
+html[data-theme="dark"] .text-\[\#68736b\],
+html[data-theme="dark"] .text-\[\#737b73\],
+html[data-theme="dark"] .text-\[\#778078\],
+html[data-theme="dark"] .text-\[\#818a80\],
+html[data-theme="dark"] .text-\[\#929b91\],
+html[data-theme="dark"] .text-\[\#9aa29a\] {
+  color: #aab8ad !important;
+}
+html[data-theme="dark"] .bg-white,
+html[data-theme="dark"] .bg-\[\#f7f6f1\],
+html[data-theme="dark"] .bg-\[\#f8f8f4\] {
+  background-color: #192720 !important;
+}
+html[data-theme="dark"] .bg-\[\#e9eee6\] {
+  background-color: #202f27 !important;
+}
+html[data-theme="dark"] .text-\[\#172c25\],
+html[data-theme="dark"] .text-\[\#43564a\],
+html[data-theme="dark"] .text-\[\#174b3b\] {
+  color: #edf2e9 !important;
+}
+html[data-theme="dark"] .border-\[\#172c25\]\/10,
+html[data-theme="dark"] .border-\[\#172c25\]\/15 {
+  border-color: rgba(237, 242, 233, .14) !important;
+}
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+  background-color: #202f27 !important;
+  color: #edf2e9 !important;
+  border-color: rgba(237, 242, 233, .18) !important;
+}
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #91a096 !important;
+}
+html[data-theme="dark"] .hover\\:bg-\\[\\#e9eee6\\]:hover {
+  background-color: #2b4034 !important;
+}
+html[data-theme="dark"] #services article,
+html[data-theme="dark"] #reviews article,
+html[data-theme="dark"] #contact form {
+  border-color: rgba(237, 242, 233, .12);
+}
+html[data-theme="dark"] #services a.group {
+  background-color: #192720;
+}
+html[data-theme="dark"] #services a.group:hover {
+  background-color: #174b3b;
+}
+html[data-theme="dark"] #contact .bg-white {
+  background-color: #192720 !important;
+}
+html[data-theme="dark"] .shadow-\\[0_20px_60px_rgba\\(23\\,44\\,37\\,\\.07\\)\\] {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .22) !important;
+}
+html[data-theme="dark"] .bg-\\[\\#174b3b\\] {
+  background-color: #102b21 !important;
+}
+html[data-theme="dark"] footer {
+  background-color: #0b1511 !important;
+}
+html[data-theme="dark"] .bg-\\[\\#c7e36a\\] {
+  color: #172c25 !important;
+}
